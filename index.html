@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+		<title>Bastien Peuziat | Portfolio</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: "Roboto", sans-serif;
+				font-size: 16px;
+				margin: 0;
+				padding: 0;
+				background-color: #f4f4f9;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.container {
+				width: 80%;
+				max-width: 1300px;
+				margin: 20px auto;
+				background: #fff;
+				padding: 20px;
+				box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+			}
+			.header,
+			.section-title {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.header {
+				font-size: 2em;
+				font-weight: bold;
+				color: #333;
+			}
+			.info,
+			.projects {
+				display: flex;
+				justify-content: space-around;
+
+				margin-top: 20px;
+			}
+			.info div,
+			.projects div {
+				flex: 1;
+				margin: 10px;
+			}
+			.info .picture {
+				flex: 0.4;
+				text-align: center;
+			}
+			.picture img {
+				width: 100%;
+				max-width: 200px;
+				border-radius: 10%;
+				border: 1px solid black;
+			}
+			.details {
+				align-items: center;
+				background-color: rgb(231, 231, 231);
+				padding: 0 15px;
+				border-radius: 8px;
+				box-shadow: 0px 0 10px rgba(0, 0, 0, 0.3);
+			}
+			.details h2 {
+				text-align: center;
+				margin-bottom: 10px;
+				color: #333;
+			}
+			.details p {
+				margin: 5px 0;
+				color: #666;
+			}
+			.projects {
+				flex-wrap: wrap;
+			}
+			.project {
+				max-width: 28%;
+				flex: 2;
+				margin: 10px;
+				border: 2px solid #000;
+				padding: 10px;
+				position: relative;
+				background: #fff;
+				overflow: hidden; /* Ajouté pour garantir que l'overlay reste à l'intérieur du conteneur */
+			}
+			.project img {
+				width: 100%;
+				height: auto;
+			}
+			.project-link:hover {
+				opacity: 0.85;
+			}
+			.overlay {
+				letter-spacing: 0.5px;
+				width: auto;
+				position: absolute;
+				top: 200px;
+				left: 30px;
+				background-color: rgba(46, 62, 88, 0.9);
+				color: white;
+				padding: 1em 0.4em 1em 0.4em;
+				font-size: 0.9em;
+			}
+			.logo, .logo-link {
+				width: 12%;
+			}
+			.logo-link:hover {
+				opacity: 80%;
+			}
+
+			.logo-projet {
+				width: 100%;
+			}
+
+			.description {
+				margin-top: 10px;
+			}
+			.description h3 {
+				margin-bottom: 10px;
+				color: #333;
+			}
+			.description p {
+				margin: 5px 0;
+				color: #666;
+			}
+			a {
+				text-decoration: none;
+			}
+			.github-button {
+				display: flex;
+				align-items: center;
+				padding: 10px 20px;
+				background-color: #2e3e58;
+				color: #fff;
+				border: none;
+				cursor: pointer;
+			}
+			.github-button:hover {
+				opacity: 80%;
+			}
+			.png-image {
+				background-color: lightgray;
+			}
+			.button-div {
+				display: flex;
+				justify-content: center;
+			}
+			.project-description {
+				min-height: 130px;
+			}
+			.contact {
+				text-align: center;
+			}
+			.technologies {
+				margin: 0;
+				display: flex;
+				justify-content: space-around;
+			}
+			.technologies .logo:first-child {
+				margin-left: 30px;
+			}
+			.technologies .logo:last-child {
+				margin-right: 30px;
+			}
+			.link {
+				color: inherit;
+				font-style: italic;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">Bastien Peuziat | Portfolio</div>
+			<hr />
+			<div class="info">
+				<div class="picture">
+					<img src="Profil.jpg" alt="Photo de Bastien Peuziat" class="picture" />
+				</div>
+				<div class="details">
+					<h2>Informations sur moi</h2>
+					<p>
+						Hello, je m'appelle Bastien Peuziat, j'ai 28 ans et je suis actuellement en formation de
+						"Développeur d'application Python" via la plateforme OpenClassrooms.
+					</p>
+					<h2>Technologies</h2>
+					<div class="technologies">
+						<img src="python.png" alt="Logo Python" class="logo" />
+						<img src="html-5.png" alt="Logo HTML" class="logo" />
+						<img src="css-3.png" alt="Logo CSS" class="logo" />
+						<img src="js.png" alt="Logo JavaScript" class="logo" />
+					</div>
+				</div>
+				<div class="contact">
+					<h2>Contact et liens utiles</h2>
+					<a href="https://github.com/Fibuc" target="_blank">
+						<img src="logo_github.svg" alt="Logo GitHub" class="logo-link" />
+					</a>
+					<a href="mailto:peuziat.bastien@gmail.com" target="_blank">
+						<img src="logo_mail.svg" alt="Logo GitHub" class="logo-link" />
+					</a>
+					<a href="tel:+33680482594" target="_blank">
+						<img src="logo_telephone.svg" alt="Logo Téléphone" class="logo-link" />
+					</a>
+					<a href="https://wa.me/33680482594" target="_blank">
+						<img src="logo_whatsapp.png" alt="Logo WhatsApp" class="logo-link" />
+					</a>
+					<a href="https://www.linkedin.com/in/bastien-peuziat-87793a20b/" target="_blank">
+						<img src="logo_linkedin.png" alt="Logo LinkedIn" class="logo-link" />
+					</a>
+					<a href="Bastien_Peuziat_CV.pdf" target="_blank">
+						<img src="logo_cv.png" alt="Logo CV" class="logo-link" />
+					</a>
+				</div>
+			</div>
+			<div class="section-title">
+				<h2>Mes projets</h2>
+			</div>
+			<div class="projects">
+				<div class="project">
+					<a href="https://github.com/Fibuc/Club_Echec" target="_blank" class="project-link">
+						<img src="club_echecs.jpg" alt="Projet 1" />
+						<h2 class="overlay">Gestionnaire de tournois</h2>
+					</a>
+					<div class="description">
+						<h3>Description projet :</h3>
+						<p class="project-description">
+							Il s'agit d'un projet pédagogique ayant pour but de réaliser un gestionnaire de tournois
+							d'échecs en utilisant la méthode de tournois Suisse. Ce gestionnaire a été réalisé en
+							utilisant la POO et un modèle de conception MVC.
+						</p>
+					</div>
+					<div class="button-div">
+						<a href="https://github.com/Fibuc/Club_Echec" target="_blank">
+							<button class="github-button">Voir sur GitHub</button>
+						</a>
+					</div>
+				</div>
+				<div class="project">
+					<a href="https://github.com/Fibuc/Books_Online" target="_blank" class="project-link">
+						<img src="scraper.jpeg" alt="Projet 2" />
+						<h2 class="overlay">Scraper Books Online</h2>
+					</a>
+					<div class="description">
+						<h3>Description projet :</h3>
+						<p class="project-description">
+							Il s'agit d'un projet pédagogique dans lequel j'ai réalisé un script permettant de scraper
+							un site web. Le site scrapé est un site "sandbox" nommé
+							<a href="https://books.toscrape.com/" target="_blank" class="link">Books To Scrape</a>
+							possédant plusieurs pages dans lesquelles l'objectif était de récupérer l'ensemble des
+							informations de tous les livres.
+						</p>
+					</div>
+					<div class="button-div">
+						<a href="https://github.com/Fibuc/Books_Online" target="_blank">
+							<button class="github-button">Voir sur GitHub</button>
+						</a>
+					</div>
+				</div>
+				<div class="project">
+					<a href="https://github.com/Fibuc/JustStreamIt" target="_blank" class="project-link">
+						<img src="juststreamit.png" alt="Projet 3" class="png-image" />
+						<h2 class="overlay">Site web responsive</h2>
+					</a>
+					<div class="description">
+						<h3>Description projet :</h3>
+						<p class="project-description">
+							C'est un projet pédagogique dans lequel il était demandé de réaliser un site web en HTML,
+							CSS et Vanilla JavaScript conforme à une maquette. De plus, le script devait récupérer les
+							informations à partir d'une API puis mettre à jour automatiquement les informations via des
+							"event listeners".
+						</p>
+					</div>
+					<div class="button-div">
+						<a href="https://github.com/Fibuc/JustStreamIt" target="_blank">
+							<button class="github-button">Voir sur GitHub</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
